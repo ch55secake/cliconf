@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "cliconf"
+version = "1.0.0"
+description = "Create and manage persistent configuration files for python command line applications"
+authors = ["ch55secake"]
+packages = [{include = "cliconf"}]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
