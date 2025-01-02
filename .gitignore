@@ -169,4 +169,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Jetbrains configuration folder
 .idea
+
+# Poetry lock file
+poetry.lock
