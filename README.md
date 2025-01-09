@@ -34,7 +34,8 @@ In the above example, we use `safe_initialize` as we want to make sure that the 
 
 ## Installation & Prerequisites
 
-> [!NOTE] As for now I have not published the package you need to do the installation 
+> [!NOTE] 
+> As for now I have not published the package you need to do the installation 
 > manually if you want to use the package.  
  
 In order to install the package, you need to have at least ``python@3.12`` and ``pip3``. 
