@@ -32,6 +32,9 @@ def init(config_object: Annotated[dict[str], t.Argument()]):
 
 In the above example, we use `safe_initialize` as we want to make sure that the file doesn't already exist before we create it.
 
+This will create a `yaml` file in the directory `$HOME/.config/ExampleApp/config.yaml`, and in here will be the config object 
+provided when you initialised the configurer. 
+
 ## Installation & Prerequisites
 
 > [!NOTE] 

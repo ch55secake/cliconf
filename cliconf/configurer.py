@@ -19,7 +19,7 @@ class Configurer(object):
         self.config = config
         self.path = path
         if path is None:
-            self.path = f"$HOME/.config/{app_name}/{app_name}.yml"
+            self.path = f"$HOME/.config/{app_name}/config.yml"
         self.app_name = app_name
 
 
