@@ -1,13 +1,16 @@
 [tool.poetry]
 name = "cliconf"
-version = "1.0.0"
+version = "1.0.3"
 description = "Create and manage persistent configuration files for python command line applications"
 authors = ["ch55secake"]
-packages = [{include = "cliconf"}]
+repository = "https://github.com/ch55secake/cliconf"
+
 
 [tool.poetry.dependencies]
 python = "^3.12"
 pyyaml = "^6.0.2"
+pytest = "^8.3.4"
+pytest-mock = "3.14.0"
 
 
 [build-system]

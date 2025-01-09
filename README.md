@@ -17,7 +17,7 @@ Below is some example usage for if you wanted to write a config file in `yaml`:
 import typer as t 
 from typing import Annotated
 
-from cliconf.configurer import Configurer
+from cliconf import Configurer
 
 app: t.Typer = t.Typer()
 
@@ -30,4 +30,28 @@ def init(config_object: Annotated[dict[str], t.Argument()]):
     configurer.safe_initialize()
 ```
 
-In the above example, we use `safe_initialize` as we want to make sure that the file doesn't already exist before we create it. 
+In the above example, we use `safe_initialize` as we want to make sure that the file doesn't already exist before we create it.
+
+## Installation & Prerequisites
+
+> [!NOTE] As for now I have not published the package you need to do the installation 
+> manually if you want to use the package.  
+ 
+In order to install the package, you need to have at least ``python@3.12`` and ``pip3``. 
+
+This tool also then expects that you correctly set the path variables for your ``pip3`` and ``python``
+installations, for example the ones that I currently have set in my zsh profile are: 
+
+```bash
+ export PATH="$HOME/.local/bin:$PATH"
+ export PATH="$HOME/Library/Python/3.12/bin:$PATH"
+```
+
+You can create a wheel and install it with `pip` by running the below commands: 
+
+```bash
+poetry build 
+pip3 install dist/cliconf-1.0.3-py3-none-any.whl --user
+```
+
+After installation, you should be able to use the package within your project. 

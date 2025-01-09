@@ -19,7 +19,7 @@ class Configurer(object):
         self.config = config
         self.path = path
         if path is None:
-            self.path = f"$HOME/.config/{app_name}.yml"
+            self.path = f"$HOME/.config/{app_name}/{app_name}.yml"
         self.app_name = app_name
 
 
@@ -41,8 +41,6 @@ class Configurer(object):
             return self.initialize()
 
 
-
-
     def initialize(self) -> bool:
         """
         Create configuration file, does not check if the configuration file exists before attempting to write.
@@ -55,6 +53,8 @@ class Configurer(object):
             case FileType.JSON:
                 json_manager: JsonManager = JsonManager()
                 return json_manager.write_file(content=self.config, path=self.path)
+            case _:
+                raise TypeError("File type currently unsupported, please use either YAML or JSON")
 
 
     def read_configuration(self) -> dict:
